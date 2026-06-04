@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeirdFact | Discover the World's Strangest Truths</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">Weird<span>Fact</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#facts">Explore</a>
+            <a href="#newsletter">Newsletter</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="gradient-1"></div>
+            <div class="gradient-2"></div>
+        </div>
+        <div class="hero-content">
+            <br><br><br><br><br>
+            <h1>Discover the<br>Strangest Truths<br>on Earth</h1>
+            <p>From science to history, animals to space — prepare to have your mind blown with the weirdest facts you've never heard.</p>
+            <div class="hero-buttons">
+                <a href="#categories"><button class="btn-primary" id="exploreFactsBtn">Start Exploring <i class="fas fa-arrow-right"></i></button></a>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number" id="statTotalFacts">75+</div>
+                    <div class="stat-label">Weird Facts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="statCategories">8</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="statFavoritesCount">0</div>
+                    <div class="stat-label">Favorites</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="categories">
+        <div class="section-header">
+            <div class="section-tag">Browse by Category</div>
+            <h2>Explore the Weirdness</h2>
+            <p>Choose your favorite category and dive into the most bizarre facts</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid"></div>
+    </section>
+    <section class="container">
+
+    <div class="card" id="cat1">
+        <img src="human.jpg" alt="Human">
+        <h2>Human</h2>
+        <p>Discover the strange abilities, hidden traits, and surprising facts that make humans one of the most fascinating species on Earth.</p>
+        <a href="category1.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat2">
+        <img src="space.jpg" alt="Space">
+        <h2>Space</h2>
+        <p>Journey beyond Earth and learn about mysterious planets, cosmic oddities, and the wonders of the universe.</p>
+        <a href="category2.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat3">
+        <img src="animal.jpg" alt="Animals">
+        <h2>Animals</h2>
+        <p>Explore bizarre creatures, unusual behaviors, and incredible survival skills found throughout the animal kingdom.</p>
+        <a href="category3.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat4">
+        <img src="science.jpg" alt="Science">
+        <h2>Science</h2>
+        <p>Uncover mind-bending scientific discoveries, strange phenomena, and facts that challenge how we understand reality.</p>
+        <a href="category4.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat5">
+        <img src="bermuda.jpg" alt="Bermuda Triangle">
+        <h2>Bermuda Triangle</h2>
+        <p>Dive into the legends, disappearances, and unexplained mysteries surrounding one of the world's most famous regions.</p>
+        <a href="category5.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat6">
+        <img src="alien.jpg" alt="Aliens">
+        <h2>Aliens</h2>
+        <p>Investigate extraterrestrial theories, UFO mysteries, and the unanswered questions about intelligent life beyond Earth.</p>
+        <a href="category6.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat7">
+        <img src="nephilim.jpg" alt="Nephilim">
+        <h2>Nephilim</h2>
+        <p>Explore ancient tales of giant beings, biblical mysteries, and the enduring legends surrounding the Nephilim.</p>
+        <a href="category7.html">Read More</a>
+    </div>
+
+    <div class="card" id="cat8">
+        <img src="history.jpg" alt="History">
+        <h2>History</h2>
+        <p>Travel through time and uncover surprising events, forgotten stories, and strange moments that shaped our world.</p>
+        <a href="category8.html">Read More</a>
+    </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="featured-card" id="featuredFact">
+            <div class="featured-quote">🤯</div>
+            <div class="featured-text" id="featuredText">Loading amazing facts...</div>
+            <div class="featured-category" id="featuredCategory">Featured</div>
+        </div>
+    </section>
+
+    <section class="section" id="facts">
+        <div class="section-header">
+            <div class="section-tag">All Weird Facts</div>
+            <h2>Mind-Blowing Collection</h2>
+            <p>Scroll through 150+ of the strangest facts you'll ever read</p>
+        </div>
+        <div class="filter-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search weird facts...">
+            </div>
+            <select id="categoryFilter" class="filter-select"></select>
+            <button id="resetFiltersBtn" class="btn-secondary" style="padding: 0 1.5rem;">Reset</button>
+        </div>
+        <div class="facts-grid" id="factsGrid"></div>
+        <div class="pagination" id="pagination"></div>
+    </section>
+
+    <section class="section" id="newsletter">
+        <div class="newsletter">
+            <h3>Get Weirder Every Week</h3>
+            <p>Subscribe to get the strangest facts delivered to your inbox</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" id="newsletterEmail">
+                <button id="newsletterSubscribe">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">Weird<span style="color:#8b5cf6;">Fact</span></div>
+                <p>Discovering the strangest truths our world has to offer. Updated daily with mind-blowing content.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#facts">All Facts</a>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="#cat1">🧍‍♂️ Human</a>
+                <a href="#cat2">🚀 Space</a>
+                <a href="#cat3">🐾 Animals</a>
+                <a href="#cat4">🔬 Science</a>
+                <a href="#cat5">🔎 Bermuda Triangle</a>
+                <a href="#cat6">👽 Aliens</a>
+                <a href="#cat7">🧬 Nephilim</a>
+                <a href="#cat8">📜 History</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 WeirdFact — All rights reserved. Facts are 100% weird and verified.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <div class="modal" id="randomModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h3><i class="fas fa-dice-d6"></i> Random Weird Fact</h3>
+            <div class="modal-random-text" id="modalRandomText"></div>
+            <button class="btn-primary" id="anotherRandomBtn">Another Fact</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
